@@ -5,6 +5,7 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [isHovered, setIsHovered] = useState(false); // new state for hovering effect
 
   return (
     <>
@@ -28,6 +29,22 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div className="hover-button-container">
+        <button
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          style={{
+            backgroundColor: isHovered ? 'white' : 'black',
+            color: isHovered ? 'black' : 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+          }}
+        >
+          Hover Me
+        </button>
+      </div>
     </>
   )
 }

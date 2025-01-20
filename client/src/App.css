@@ -40,3 +40,34 @@
 .read-the-docs {
   color: #888;
 }
+
+.container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.text {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.hover-button {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hover-button.hover {
+  background-color: white;
+  color: black;
+}
+
+hover-button:focus {
+  outline: none;
+}
